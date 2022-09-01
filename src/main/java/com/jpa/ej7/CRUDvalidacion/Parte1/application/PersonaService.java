@@ -5,33 +5,26 @@ import com.jpa.ej7.CRUDvalidacion.Parte1.infraestructure.controller.PersonaOutpu
 
 import java.util.List;
 
-public abstract class PersonaService {
+public interface PersonaService {
 
-    public PersonaOutputDto getPersona() {
-        return null;
-    }
+    public PersonaOutputDto getPersona();
 
-    public PersonaOutputDto addPersona(PersonaInputDto personaInputDto) throws Exception {
-        return null;
-    }
+    public PersonaOutputDto addPersona(PersonaInputDto personaInputDto) throws Exception;
 
-    public PersonaOutputDto updatePersona(PersonaInputDto personaInputDto, int id) throws Exception {
-        return null;
-    }
+    public PersonaOutputDto updatePersona(PersonaInputDto personaInputDto, int id) throws Exception;
 
-    public void deletePersonaById(int id) {
-
-    }
+    public void deletePersonaById(int id);
 
     public abstract PersonaOutputDto getPersonaById(int id);
 
-    public List<PersonaOutputDto> getPersonaByName(String name) {
-        return null;
-    }
+    String deletePersona(int id) throws Exception;
 
-    public List<PersonaOutputDto> getAllPerson() {
-        return null;
-    }
+    PersonaOutputDto findPersonaById(int id) throws Exception;
 
-    public abstract PersonaOutputDto addPerson(PersonaInputDto newPersonaDto) throws Exception;
+    public List<PersonaOutputDto> getPersonaByName(String name);
+
+    public List<PersonaOutputDto> getAllPerson();
+
+    PersonaOutputDto addPerson(PersonaInputDto newPersonaDto) throws Exception;
 }
+

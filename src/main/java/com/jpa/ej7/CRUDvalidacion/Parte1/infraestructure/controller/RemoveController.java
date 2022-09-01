@@ -1,6 +1,7 @@
 package com.jpa.ej7.CRUDvalidacion.Parte1.infraestructure.controller;
 
 import com.jpa.ej7.CRUDvalidacion.Parte1.application.PersonaService;
+import com.jpa.ej7.CRUDvalidacion.Parte1.application.PersonaServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,21 +13,21 @@ import java.util.List;
     public class RemoveController {
 
         @Autowired
-        PersonaService personaService;
+        PersonaServiceImp personaServiceImp;
 
         @GetMapping("{id}")
         public PersonaOutputDto getPersonaById(@PathVariable int id){
-            return personaService.getPersonaById(id);
+            return personaServiceImp.getPersonaById(id);
         }
 
         @GetMapping("/name/{name}")
         public List<PersonaOutputDto> getPersonaByName(@PathVariable String name){
-            return personaService.getPersonaByName(name);
+            return personaServiceImp.getPersonaByName(name);
         }
 
         @GetMapping("/todos")
         public List<PersonaOutputDto> getAll(){
-            return personaService.getAllPerson();
+            return personaServiceImp.getAllPerson();
         }
     }
 

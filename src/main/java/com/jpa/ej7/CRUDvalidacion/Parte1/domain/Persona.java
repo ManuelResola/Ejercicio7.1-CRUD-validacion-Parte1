@@ -29,6 +29,6 @@ public class Persona implements Serializable {
 
 
     public Boolean getActive() {
-        return null;
+        return true;
     }
 }

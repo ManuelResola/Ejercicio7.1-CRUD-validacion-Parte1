@@ -1,6 +1,7 @@
 package com.jpa.ej7.CRUDvalidacion.Parte1.infraestructure.controller;
 
 import com.jpa.ej7.CRUDvalidacion.Parte1.application.PersonaService;
+import com.jpa.ej7.CRUDvalidacion.Parte1.application.PersonaServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
